@@ -30,7 +30,7 @@ namespace Assets.Gamelogic
 
         private void OnCollisionEnter(Collision collision)
         {
-            if(collision.gameObject.IsEntityObject() && collision.gameObject.name.Contains("FloorTile") && !collidedThisFrame)
+            if(collision.gameObject.IsSpatialOsEntity() && collision.gameObject.name.Contains("FloorTile") && !collidedThisFrame)
             {
                 collidedThisFrame = true;
                 bounces++;

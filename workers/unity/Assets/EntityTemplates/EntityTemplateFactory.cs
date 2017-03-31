@@ -21,12 +21,12 @@ namespace Assets.EntityTemplates
             entity.Add(new Team.Data(teamId));
 
             var acl = Acl.Build()
-                .SetReadAccess(CommonPredicates.PhysicsOrVisual)
-                .SetWriteAccess<Position>(CommonPredicates.PhysicsOnly)
-                .SetWriteAccess<VivePlayer>(CommonPredicates.SpecificClientOnly(workerid))
-                .SetWriteAccess<Colour>(CommonPredicates.PhysicsOnly)
-                .SetWriteAccess<PlayerInfo>(CommonPredicates.SpecificClientOnly(workerid))
-                .SetWriteAccess<Team>(CommonPredicates.SpecificClientOnly(workerid));
+                .SetReadAccess(CommonRequirementSets.PhysicsOrVisual)
+                .SetWriteAccess<Position>(CommonRequirementSets.PhysicsOnly)
+                .SetWriteAccess<VivePlayer>(CommonRequirementSets.SpecificClientOnly(workerid))
+                .SetWriteAccess<Colour>(CommonRequirementSets.PhysicsOnly)
+                .SetWriteAccess<PlayerInfo>(CommonRequirementSets.SpecificClientOnly(workerid))
+                .SetWriteAccess<Team>(CommonRequirementSets.SpecificClientOnly(workerid));
 
             entity.SetAcl(acl);
 
@@ -43,11 +43,11 @@ namespace Assets.EntityTemplates
             entity.Add(new Team.Data(teamId));
 
             var acl = Acl.Build()
-                .SetReadAccess(CommonPredicates.PhysicsOrVisual)
-                .SetWriteAccess<Position>(CommonPredicates.SpecificClientOnly(workerid))
-                .SetWriteAccess<Velocity>(CommonPredicates.SpecificClientOnly(workerid))
-                .SetWriteAccess<Colour>(CommonPredicates.PhysicsOnly)
-                .SetWriteAccess<Team>(CommonPredicates.SpecificClientOnly(workerid));
+                .SetReadAccess(CommonRequirementSets.PhysicsOrVisual)
+                .SetWriteAccess<Position>(CommonRequirementSets.SpecificClientOnly(workerid))
+                .SetWriteAccess<Velocity>(CommonRequirementSets.SpecificClientOnly(workerid))
+                .SetWriteAccess<Colour>(CommonRequirementSets.PhysicsOnly)
+                .SetWriteAccess<Team>(CommonRequirementSets.SpecificClientOnly(workerid));
 
             entity.SetAcl(acl);
 
@@ -63,10 +63,10 @@ namespace Assets.EntityTemplates
             entity.Add(new Team.Data(-1));
 
             var acl = Acl.Build()
-                .SetReadAccess(CommonPredicates.PhysicsOrVisual)
-                .SetWriteAccess<Position>(CommonPredicates.PhysicsOnly)
-                .SetWriteAccess<Colour>(CommonPredicates.PhysicsOnly)
-                .SetWriteAccess<Team>(CommonPredicates.PhysicsOnly);
+                .SetReadAccess(CommonRequirementSets.PhysicsOrVisual)
+                .SetWriteAccess<Position>(CommonRequirementSets.PhysicsOnly)
+                .SetWriteAccess<Colour>(CommonRequirementSets.PhysicsOnly)
+                .SetWriteAccess<Team>(CommonRequirementSets.PhysicsOnly);
 
             entity.SetAcl(acl);
 
@@ -81,9 +81,9 @@ namespace Assets.EntityTemplates
             entity.Add(new GameManager.Data(0));
 
             var acl = Acl.Build()
-                .SetReadAccess(CommonPredicates.PhysicsOnly)
-                .SetWriteAccess<Position>(CommonPredicates.PhysicsOnly)
-                .SetWriteAccess<GameManager>(CommonPredicates.PhysicsOnly);
+                .SetReadAccess(CommonRequirementSets.PhysicsOnly)
+                .SetWriteAccess<Position>(CommonRequirementSets.PhysicsOnly)
+                .SetWriteAccess<GameManager>(CommonRequirementSets.PhysicsOnly);
 
             entity.SetAcl(acl);
 

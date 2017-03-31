@@ -10,7 +10,7 @@ namespace Assets.Editor
         [MenuItem("Improbable/Snapshots/Generate Snapshot %#&w")]
         private static void GenerateSnapshot()
         {
-            var path = Application.dataPath + "/../../../snapshots/initial_world.snapshot";
+            var path = Application.dataPath + "/../../../snapshots/default.snapshot";
             var snapshotBuilder = new SnapshotBuilder(path);
 
             snapshotBuilder.Add(EntityTemplateFactory.GameManager());

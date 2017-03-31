@@ -6,11 +6,11 @@ type SwitchTeamRequest {
 }
 
 type SwitchTeamResponse {
-	
+
 }
 
 component Team {
   id = 1200;
   int32 team_id = 1;
-  command SwitchTeamRequest switch_team returns SwitchTeamResponse;
+  command SwitchTeamResponse switch_team(SwitchTeamRequest);
 }
